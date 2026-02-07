@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Pong</title>
+    <!-- Vincular archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 JUEGO DE PONG DE NICO 🎮</h1>
+        
+        <!-- Canvas para el juego -->
+        <canvas id="pongCanvas" width="800" height="400"></canvas>
+        
+        <!-- Puntuación -->
+        <div class="score-board">
+            <div class="player-score">
+                <h2>Jugador 1 (↑↓)</h2>
+                <div class="score-number" id="score1">0</div>
+            </div>
+            <div class="player-score">
+                <h2>Jugador 2 (A/Z)</h2>
+                <div class="score-number" id="score2">0</div>
+            </div>
+        </div>
+
+        <!-- Estado del juego -->
+        <div class="game-status" id="gameStatus"></div>
+
+        <!-- Instrucciones -->
+        <div class="instructions">
+            <h3>📋 Instrucciones del Juego</h3>
+            <p><strong>Objetivo:</strong> Evita que la pelota pase tu paleta. ¡El primero en llegar a 5 puntos gana!</p>
+            
+            <div class="player-controls">
+                <div class="controls-left">
+                    <h4>Jugador 1 (Derecha)</h4>
+                    <p>↑ Arriba<br>↓ Abajo</p>
+                </div>
+                <div class="controls-right">
+                    <h4>Jugador 2 (Izquierda)</h4>
+                    <p>A Arriba<br>Z Abajo</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 15px; color: #00ff00;">
+                <strong>💡 Tip:</strong> La velocidad de la pelota aumenta con cada golpe. ¡Sé estratégico!
+            </p>
+        </div>
+
+        <!-- Botón de reinicio -->
+        <div class="button-container">
+            <button onclick="resetGame()">🔄 Reiniciar Juego</button>
+        </div>
+    </div>
+
+    <!-- Vincular archivo JavaScript externo -->
+    <script src="game.js"></script>
+</body>
+</html>
